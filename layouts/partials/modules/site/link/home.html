@@ -1,4 +1,4 @@
-{{ $baseurl := .Site.BaseURL }}
+{{ $homeurl := or .Site.Params.homeurl .Site.BaseURL "/" }}
 {{ with .Site.Params.home }}
-<a class="homelink" href="{{ $baseurl }}">{{ . }}</a>
+<a class="homelink" href="{{ $homeurl }}">{{ . }}</a>
 {{ end }}
