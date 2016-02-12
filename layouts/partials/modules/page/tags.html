@@ -1,3 +1,4 @@
+{{ $uglyurls := .Site.Params.uglyurls }}
 {{ range .Params.tags }}
-<a class="label" href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+<a class="label" href="{{ "tags/" | relURL }}{{ . | urlize }}{{if $uglyurls}}.html{{end}}">{{ . }}</a>
 {{ end }}
